@@ -6,8 +6,8 @@
    - anon public key: começa com "eyJ..."
    ============================================================ */
 window.RSVP_CONFIG = {
-  supabaseUrl: "https://SEU-PROJETO.supabase.co",
-  supabaseAnonKey: "SUA-ANON-PUBLIC-KEY",
+  supabaseUrl: "https://lcukwbxrivqvbpeaatbu.supabase.co",
+  supabaseAnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxjdWt3YnhyaXZxdmJwZWFhdGJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgzMDY3MzgsImV4cCI6MjEwMzg4MjczOH0.0iYDiZDc4wUGhgxbDOvH8NHzgdqmwgYeR1ohPLP915I",
 
   /* Nome da tabela criada pelo script supabase-setup.sql */
   table: "responses",
