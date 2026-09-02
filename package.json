@@ -1,0 +1,14 @@
+{
+  "name": "rsvp-pedro",
+  "version": "1.0.0",
+  "description": "Confirmacao de presenca - Aniversario do Pedro",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

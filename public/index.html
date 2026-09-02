@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirmação de Presença</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css?v=3" />
+</head>
+<body>  <div class="balloons" aria-hidden="true">
+    <span class="balloon b1"></span>
+    <span class="balloon b2"></span>
+    <span class="balloon b3"></span>
+    <span class="balloon b4"></span>
+    <span class="balloon b5"></span>
+    <span class="balloon b6"></span>
+  </div>
+
+  <main class="card">
+    <div class="hero-wrap">
+      <img
+        src="images/invite.webp"
+        alt="Convite do aniversário do Pedro"
+        class="hero-img"
+        loading="eager"
+      />
+    </div>
+
+    <div class="card-head">
+      <p class="eyebrow">Você está convidado</p>
+      <h1 id="partyTitle">Aniversário do Pedro</h1>
+    </div>
+
+    <div class="party-info">
+      <div class="info-row">
+        <span class="info-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <rect x="3" y="5" width="18" height="16" rx="2" />
+            <path d="M3 9h18" />
+            <path d="M8 3v4M16 3v4" />
+          </svg>
+        </span>
+        <div>
+          <span class="info-label">Data</span>
+          <span class="info-value" id="partyDate">—</span>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 7v5l3 2" />
+          </svg>
+        </span>
+        <div>
+          <span class="info-label">Horário</span>
+          <span class="info-value" id="partyTime">—</span>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z" />
+            <circle cx="12" cy="10" r="2.5" />
+          </svg>
+        </span>
+        <div>
+          <span class="info-label">Local</span>
+          <span class="info-value" id="partyLocation">—</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="party-message" id="partyMessage"></p>
+
+    <div class="deadline-banner">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="13" r="8" />
+        <path d="M12 9v4l2.5 2.5M9 2h6" />
+      </svg>
+      <span>Confirme sua presença até <strong id="partyConfirmBy">14/09/2026</strong></span>
+    </div>
+
+    <form id="rsvpForm" novalidate>
+      <div class="field-row">
+        <div class="field">
+          <label for="firstName">Nome</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="Seu nome"
+            autocomplete="given-name"
+            required
+          />
+          <span class="error-msg" data-for="firstName"></span>
+        </div>
+        <div class="field">
+          <label for="lastName">Sobrenome</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Seu sobrenome"
+            autocomplete="family-name"
+            required
+          />
+          <span class="error-msg" data-for="lastName"></span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="voce@email.com"
+          autocomplete="email"
+          required
+        />
+        <span class="error-msg" data-for="email"></span>
+      </div>
+
+      <div class="field">
+        <label for="phone">Celular</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="(11) 99999-9999"
+          autocomplete="tel"
+          inputmode="numeric"
+          required
+        />
+        <span class="error-msg" data-for="phone"></span>
+      </div>
+
+      <button type="submit" id="submitBtn" class="submit-btn">
+        Confirmar presença
+      </button>
+    </form>
+
+    <div id="successBox" class="success-box" hidden>
+      <span class="success-icon">
+        <svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3l2.5 5.5L20 9.3l-4 4 .9 5.7L12 16.5 7.1 19l.9-5.7-4-4 5.5-.8z" />
+        </svg>
+      </span>
+      <h2 id="successTitle">Presença confirmada!</h2>
+      <p id="successText">Muito obrigado. Nos vemos na festa do Pedro!</p>
+    </div>
+
+    <div id="errorBox" class="error-box" hidden>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M12 3 2.5 20h19L12 3z" />
+        <path d="M12 10v4M12 17h.01" />
+      </svg>
+      <p id="errorText"></p>
+    </div>
+
+    <p class="footer-note">Aniversário do Pedro - Fest Kids</p>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="config.js?v=4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js?v=4"></script>
+</body>
+</html>

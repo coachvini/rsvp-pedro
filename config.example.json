@@ -1,0 +1,14 @@
+{
+  "party": {
+    "title": "Aniversário do Pedro",
+    "date": "27/09/2026",
+    "time": "12:00",
+    "location": "Fest Kids - Rua José Lourenço, 790, São Pedro",
+    "confirmBy": "14/09/2026",
+    "message": "Sua presença é muito especial! Confirme abaixo e venha comemorar com a gente."
+  },
+  "admin": {
+    "password": "pedro2026",
+    "hint": "Troque esta senha em config.json"
+  }
+}

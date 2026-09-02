@@ -111,6 +111,10 @@
 *.pem
 *.key
 
+# App runtime data (senha admin e respostas dos convidados)
+config.json
+data/
+
 # Temporary files
 *.tmp
 *.temp
